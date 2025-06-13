@@ -1,4 +1,4 @@
-# Copyright (C) 2021 - present  Alexander Czutro <github@czutro.ch>
+# Copyright (C) 2025 - present  Alexander Czutro <github@czutro.ch>
 #
 # This program is free software: you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by
@@ -14,9 +14,34 @@
 Application to easily sort images into configurable categories.
 """
 
+from .preferencesorter import PreferenceSorter
+
+import argparse
+import tkinter as tk
+
 
 def main():
-    print("hello world")
+    parser = argparse.ArgumentParser(
+        description="A tool to sort images by choosing from random pairs."
+    )
+    parser.add_argument(
+        'files',
+        metavar='FILE',
+        type=str,
+        nargs='+',
+        help='One or more image files to be sorted.'
+    )
+    args = parser.parse_args()
+
+    if not args.files:
+        print("Error: No image files provided. Please specify at least one image file.")
+        parser.print_help()
+        return
+    #if
+
+    root = tk.Tk()
+    PreferenceSorter(root, args.files)
+    root.mainloop()
 #main
 
 

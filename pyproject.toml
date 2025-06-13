@@ -12,7 +12,7 @@
 
 [tool.poetry]
 name = "czimagesort"
-version = "1.0.0"
+version = "1.0"
 description = "Application to easily sort images into configurable categories."
 authors = ["Alexander Czutro <github@czutro.ch>"]
 homepage = "https://github.com/aczutro/czytget"
@@ -27,7 +27,7 @@ python = "^3.12"
 czimagesort = "czimagesort:main"
 
 [build-system]
-requires = ["poetry-core>=1.0.0"]
+requires = ["poetry-core>=1.0.0", "pillow>=10.2.0"]
 build-backend = "poetry.core.masonry.api"
 
 ### aczutro ###################################################################

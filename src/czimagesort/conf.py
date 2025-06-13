@@ -1,5 +1,3 @@
-#!/usr/bin/env python3
-#
 # Copyright (C) 2025 - present  Alexander Czutro <github@czutro.ch>
 #
 # This program is free software: you can redistribute it and/or modify
@@ -12,10 +10,15 @@
 #
 ################################################################### aczutro ###
 
-import czimagesort
+"""
+Configuration file.
+"""
 
-if __name__ == '__main__':
-    czimagesort.main()
-#if
+IMAGE_DISPLAY_SIZE = (900, 900)
+CHOSEN_DIR = ".chosen"
+DISCARDED_DIR = ".discarded"
+PADDING = 7
+BG_COLOUR = "#2d2d2d"
+
 
 ### aczutro ###################################################################
