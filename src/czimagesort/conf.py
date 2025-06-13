@@ -11,7 +11,7 @@
 ################################################################### aczutro ###
 
 """
-Configuration file.
+Configuration
 """
 
 IMAGE_DISPLAY_SIZE = (900, 900)

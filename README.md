@@ -1,6 +1,6 @@
 # czimagesort
 
-Application to easily sort images into configurable categories.
+Application to easily sort images based on user preference.
 
 
 ## Installation
@@ -15,4 +15,4 @@ pip install .
 
 ## Changelog
 
-### Version 1.0.0: first release
+### Version 1.0: first release

@@ -11,7 +11,7 @@
 ################################################################### aczutro ###
 
 """
-Application to easily sort images into configurable categories.
+Application to easily sort images based on user preference.
 """
 
 from .preferencesorter import PreferenceSorter
