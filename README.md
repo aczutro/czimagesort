@@ -1,6 +1,6 @@
 # czimagesort
 
-Application to easily sort images based on user preference.
+Lightweight applications to easily categorise images.
 
 
 ## Installation
