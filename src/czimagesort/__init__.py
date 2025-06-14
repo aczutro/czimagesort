@@ -11,12 +11,9 @@
 ################################################################### aczutro ###
 
 """
-Application to easily sort images based on user preference.
+Lightweight applications to easily categorise images.
 """
 
-__author__ = "Alexander Czutro <github@czutro.ch>"
-__version__ = "1.0"
-
-from .czimagesort import main
+from .czbestof import main as czbestofmain
 
 ### aczutro ###################################################################

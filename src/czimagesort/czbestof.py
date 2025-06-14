@@ -11,18 +11,21 @@
 ################################################################### aczutro ###
 
 """
-Application to easily sort images based on user preference.
+A tool to easily sort images based on user preference.
 """
 
 from .preferencesorter import PreferenceSorter
 
 import argparse
+import importlib.metadata
 import tkinter as tk
 
 
 def main():
+    metadata = importlib.metadata.distribution(__package__).metadata
+
     parser = argparse.ArgumentParser(
-        description="A tool to sort images by choosing from random pairs."
+        description="A tool to easily sort images based on user preference."
     )
     parser.add_argument(
         'files',
@@ -31,6 +34,10 @@ def main():
         nargs='+',
         help='One or more image files to be sorted.'
     )
+    parser.add_argument("--version",
+                        action="version",
+                        version=f"{metadata['Name']} {metadata['Version']}",
+                        help="show version number and exit")
     args = parser.parse_args()
 
     if not args.files:
