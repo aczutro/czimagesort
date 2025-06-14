@@ -15,7 +15,7 @@
 import czimagesort
 
 if __name__ == '__main__':
-    czimagesort.main()
+    czimagesort.czbestofmain()
 #if
 
 ### aczutro ###################################################################

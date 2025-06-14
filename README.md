@@ -1,16 +1,11 @@
 # czimagesort
 
-Application to easily sort images based on user preference.
+Lightweight applications to sort images easily.
 
 
-## Installation
+## czbestof
 
-Change into  the root directory  of this distribution (where  the file
-`pyproject.toml` is) and run the following command:
-
-```shell
-pip install .
-```
+A tool to sort images based on user preference.
 
 
 ## Changelog
