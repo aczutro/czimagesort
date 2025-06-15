@@ -11,7 +11,7 @@
 ################################################################### aczutro ###
 
 """
-A tool to sort images based on user preference.
+A tool to sort images into multiple categories.
 """
 
 from .preferencesorter import PreferenceSorter
@@ -25,7 +25,7 @@ def main():
     metadata = importlib.metadata.distribution(__package__).metadata
 
     parser = argparse.ArgumentParser(
-        description="A tool to sort images based on user preference."
+        description="A tool to sort images into multiple categories."
     )
     parser.add_argument(
         'files',

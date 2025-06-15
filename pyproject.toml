@@ -13,7 +13,7 @@
 [tool.poetry]
 name = "czimagesort"
 version = "1.0"
-description = "Lightweight applications to easily categorise images."
+description = "Lightweight applications to sort images easily."
 authors = ["Alexander Czutro <github@czutro.ch>"]
 homepage = "https://github.com/aczutro/czytget"
 license = "GPL-3.0-or-later"
@@ -25,6 +25,7 @@ python = "^3.12"
 
 [tool.poetry.scripts]
 czbestof = "czimagesort:czbestofmain"
+czcategorise = "czimagesort:czcategorisemain"
 
 [build-system]
 requires = ["poetry-core>=1.0.0", "pillow>=10.2.0"]
