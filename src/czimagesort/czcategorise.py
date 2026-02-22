@@ -14,11 +14,53 @@
 A tool to sort images into multiple categories.
 """
 
-from .preferencesorter import PreferenceSorter
+from .categorysorter import CategorySorter
 
 import argparse
 import importlib.metadata
+import json
+import os
 import tkinter as tk
+
+
+def loadConfig(configPath):
+    """
+    Loads the configuration file.
+    """
+    if not os.path.exists(configPath):
+        defaultConfig = {
+            "categories": [
+                {
+                    "label": "Nature",
+                    "directory": ".nature",
+                    "shortcut": "n"
+                },
+                {
+                    "label": "People",
+                    "directory": ".people",
+                    "shortcut": "p"
+                },
+                {
+                    "label": "Archive",
+                    "directory": ".archive",
+                    "shortcut": "a"
+                }
+            ],
+            "skip_shortcut": "space"
+        }
+
+        with open(configPath, 'w') as f:
+            json.dump(defaultConfig, f, indent=4)
+        #with
+
+        print(f"Default config file '{configPath}' created.  Edit it first.")
+        return None
+    #if
+
+    with open(configPath, 'r') as f:
+        return json.load(f)
+    #with
+#loadConfig
 
 
 def main():
@@ -46,8 +88,14 @@ def main():
         return
     #if
 
+    config = loadConfig(f"{os.path.expanduser('~')}/.config/{__name__}.json")
+    if not config:
+        return
+    #if
+
     root = tk.Tk()
-    PreferenceSorter(root, args.files)
+    CategorySorter(root, args.files, config)
+    root.mainloop()
     root.mainloop()
 #main
 
