@@ -1,4 +1,4 @@
-# Copyright (C) 2025 - present  Alexander Czutro <github@czutro.ch>
+# Copyright (C) 2026 - present  Alexander Czutro <github@czutro.ch>
 #
 # This program is free software: you can redistribute it and/or modify
 # it under the terms of the GNU General Public License as published by
@@ -10,15 +10,8 @@
 #
 ################################################################### aczutro ###
 
-"""
-Configuration
-"""
+"""czbestoff"""
 
-IMAGE_DISPLAY_SIZE = (900, 900)
-CHOSEN_DIR = ".chosen"
-DISCARDED_DIR = ".discarded"
-PADDING = 7
-BG_COLOUR = "#2d2d2d"
-
+from .__main__ import main
 
 ### aczutro ###################################################################

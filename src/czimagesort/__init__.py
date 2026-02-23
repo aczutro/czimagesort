@@ -14,6 +14,15 @@
 Lightweight applications to easily categorise images.
 """
 
-from .czbestof import main as czbestofmain
+import importlib.metadata
+
+try:
+    __project__ = __package__
+    __version__ = importlib.metadata.version(__package__ or __name__)
+except importlib.metadata.PackageNotFoundError:
+    __version__ = "0.0.0"
+#except
+
+__author__ = "Alexander Czutro <github@czutro.ch>"
 
 ### aczutro ###################################################################
