@@ -1,5 +1,3 @@
-#!/usr/bin/env python3
-#
 # Copyright (C) 2025 - present  Alexander Czutro <github@czutro.ch>
 #
 # This program is free software: you can redistribute it and/or modify
@@ -12,10 +10,18 @@
 #
 ################################################################### aczutro ###
 
-from czimagesort.czbestof import main
+"""
+Configuration
+"""
 
-if __name__ == '__main__':
-    main()
-#if
+from pathlib import Path
+
+
+IMAGE_DISPLAY_SIZE = (900, 900)
+CHOSEN_DIR = Path(".yes")
+DISCARDED_DIR = Path(".no")
+PADDING = 7
+BG_COLOUR = "#2d2d2d"
+
 
 ### aczutro ###################################################################
